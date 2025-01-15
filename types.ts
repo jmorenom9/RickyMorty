@@ -1,3 +1,7 @@
+export type Info = {
+    pages: number,
+}
+
 export type Character = {
     id: number,
     name: string,

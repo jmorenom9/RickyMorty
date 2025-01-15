@@ -24,11 +24,14 @@ export const schema = `#graphql
     }
 
     type Query {
-        getCharacters: [Character!]!
+        #getCharacters: [Character!]!
+        getCharacters: [Character]!
         getCharacter(id: Int!): Character
-        getMultipleCharacter(ids: [Int!]): [Character!]!
+        getMultipleCharacter(ids: [Int!]): [Character!]
         getLocations: [Location!]!
         getLocation(id: Int!): Location
+        getCharacterByPage(page: Int!): [Character!]!
+        getLocationByPage(page: Int!): [Location!]!
     }
 
     type Mutation {
